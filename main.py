@@ -7,7 +7,7 @@ app = Flask(__name__)
 data = None
 @app.route('/')
 def index():
-    return jsonify({"hola mundo git"})
+    return jsonify({"hola":" mundo git"})
     
 # Ruta para subir y procesar el archivo Excel
 @app.route('/upload', methods=['POST'])
