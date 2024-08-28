@@ -1,1 +1,1 @@
-web: python conexion_v2_git.py
+web: gunicorn conexion_v2_git:app
