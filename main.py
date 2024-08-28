@@ -5,7 +5,10 @@ app = Flask(__name__)
 
 # Variable global para almacenar los datos
 data = None
-
+@app.route('/')
+def index():
+    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+    
 # Ruta para subir y procesar el archivo Excel
 @app.route('/upload', methods=['POST'])
 def upload_file():
