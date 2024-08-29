@@ -1,14 +1,17 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Importa CORS
 import openpyxl
 
 app = Flask(__name__)
+CORS(app)  # Habilita CORS para todas las rutas
 
 # Variable global para almacenar los datos
 data = None
+
 @app.route('/')
 def index():
-    return jsonify({"hola":" mundo git"})
-    
+    return jsonify({"hola": "mundo git"})
+
 # Ruta para subir y procesar el archivo Excel
 @app.route('/upload', methods=['POST'])
 def upload_file():
